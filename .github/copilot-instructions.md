@@ -2,7 +2,7 @@
 
 SOC Terminology Bot is a focused cybersecurity portfolio project owned by Matthew Faber. The goal is straightforward: A static frontend plus Azure Functions placeholder backend for a SOC terminology chatbot that can explain security operations terms, acronyms, and workflow language in clear, beginner-friendly responses. Deployment target is Azure Static Web Apps with Azure Functions. The stack is HTML5, CSS3, Vanilla JavaScript, Azure Static Web Apps, Azure Functions (Node 20), Anthropic API. Keep the repo easy to review, easy to explain in an interview, and easy to deploy from a clean branch.
 
-When helping here, bias toward the smallest useful implementation. Preserve the deliberate no-build-step approach for the frontend. If the project uses Azure Functions, keep Node tooling isolated to `api/` and do not introduce root-level package management. Prefer plain HTML, CSS, and vanilla JavaScript that a recruiter can understand quickly by opening the repo.
+When helping here, bias toward the smallest useful implementation. Preserve the deliberate no-build-step approach for the frontend. If the project uses Azure Functions, keep Node tooling isolated to `api/` and do not introduce root-level package management. Prefer plain HTML, CSS, and vanilla JavaScript that reads clearly.
 
 What Copilot should help with:
 - Keep the bot tightly scoped to SOC terminology, acronyms, and workflow language.

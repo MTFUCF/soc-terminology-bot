@@ -20,7 +20,7 @@ Baseline date: **2026-05-16**
 - [ ] The API placeholder response is plain JSON and easy for the future frontend to consume.
 - [ ] The placeholder page leaves room for chat history, starter prompts, and error states.
 - [ ] Copilot instructions explicitly say to keep prompt logic narrow and auditable.
-- [ ] The repo documents secret handling clearly enough for a recruiter or reviewer to trust it.
+- [ ] The repo documents secret handling clearly enough for a reviewer to trust it.
 - [ ] The planned experience feels like a study tool, not a fake production SOC assistant.
 
 ## P2 — polish and follow-up checks
