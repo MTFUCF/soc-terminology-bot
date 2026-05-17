@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SOC Terminology Bot</title>
+    <meta name="description" content="Claude-powered SOC terminology helper for acronyms, workflows, and quick study refreshers." />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">SOC study aid</p>
+        <h1>SOC Terminology Bot</h1>
+        <p class="subtle">Ask about acronyms, workflows, and the language analysts use every day.</p>
+      </div>
+      <button id="clearChatButton" class="secondary-button" type="button">Clear conversation</button>
+    </header>
+
+    <main class="layout-grid">
+      <section class="panel chat-panel">
+        <div class="chat-topbar">
+          <div>
+            <p class="eyebrow">Chat</p>
+            <h2>Terminology-first, tightly scoped answers</h2>
+          </div>
+          <div id="statusPill" class="status-pill">Ready</div>
+        </div>
+
+        <div id="sampleChips" class="chip-row">
+          <button class="chip" type="button" data-question="What's the difference between IOC and IOA?">What's the difference between IOC and IOA?</button>
+          <button class="chip" type="button" data-question="Quiz me on incident response phases">Quiz me on incident response phases</button>
+          <button class="chip" type="button" data-question="Explain SOAR vs SIEM">Explain SOAR vs SIEM</button>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <form id="chatForm" class="chat-form">
+          <label class="sr-only" for="messageInput">Ask the bot a question</label>
+          <textarea id="messageInput" rows="3" placeholder="Ask about XDR vs EDR, MTTR, Sentinel, or a term you keep seeing in SOC job posts."></textarea>
+          <button class="primary-button" type="submit">Send</button>
+        </form>
+      </section>
+
+      <aside class="panel about-panel stack-sm">
+        <div>
+          <p class="eyebrow">About this bot</p>
+          <h2>Small, reviewable, and interview-friendly</h2>
+        </div>
+        <p>This is a study aid powered by Claude via the Anthropic API. It is helpful for short refreshers, but it is not authoritative guidance or an operational response system.</p>
+        <ul class="plain-list subtle">
+          <li>Scopes answers to SOC terminology and analyst workflow concepts</li>
+          <li>Uses a constrained system prompt that refuses attack guidance</li>
+          <li>Stores chat history in browser localStorage so local demos work without a database</li>
+        </ul>
+        <p>API source: <a href="https://docs.anthropic.com/" target="_blank" rel="noreferrer">Anthropic Messages API</a></p>
+        <footer class="about-footer">Built by Matthew Faber · <a href="https://github.com/matthewfaber/soc-terminology-bot" rel="noopener">source</a></footer>
+      </aside>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
